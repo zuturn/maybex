@@ -3,7 +3,8 @@
 """
 views
 """
-from . import admin
+from . import admin 
+from . import logics
 from flask import render_template, request, make_response
 
 
@@ -21,7 +22,7 @@ def index():
         if not username or not password:
             error_msg = 'username or password is empty'
         # 验证用户
-        if username == 'zuturn' and password == 'wodemingzi':
+        if logics.user_login(username, password):
             response = make_response(render_template('admin.html'))
             response.set_cookie('sessionid' , '1234567890')
             return response
