@@ -4,7 +4,7 @@
 app
 """
 from flask import Flask
-from configs import configs
+import configs
 from db import db
 
 app = Flask(__name__)

@@ -10,6 +10,6 @@ admin = Blueprint('admin', __name__)
 from . import views
 
 
-@admin.before_request
-def before_requst():
-    print('------')
+# @admin.before_request
+# def before_requst():
+#     print('------')
